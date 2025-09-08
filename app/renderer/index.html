@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>ArBrush</title>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+  <div class="app">
+    <header class="bar">
+      <h1 class="title">ArBrush</h1>
+      <div class="spacer"></div>
+      <div class="pill">Mode: <b id="mode-label">Idle</b></div>
+      <button class="btn" id="save-btn" title="Save PNG">Save</button>
+      <button class="btn" id="clear-btn" title="Clear canvas">Clear</button>
+    </header>
+
+    <main class="stage">
+      <video id="video" autoplay playsinline muted></video>
+      <canvas id="overlay"></canvas>
+      <canvas id="draw"></canvas>
+    </main>
+
+    <footer class="bar toolbar">
+      <div class="slider">
+        <span class="label">Stroke</span>
+        <span id="stroke-val" class="kbd">4</span>
+        <input id="stroke" type="range" min="1" max="20" step="1" value="4"/>
+      </div>
+
+      <label class="switch">
+        <input id="guides" type="checkbox" checked />
+        <span class="track"><span class="thumb"></span></span>
+        <span class="txt">Show guides</span>
+      </label>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
+  <script type="module" src="./index.js"></script>
+</body>
+</html>

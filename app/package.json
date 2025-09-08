@@ -1,0 +1,8 @@
+{
+  "name": "arbrush",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "scripts": { "start": "electron ." },
+  "devDependencies": { "electron": "^30.0.0" }
+}
